@@ -1,15 +1,14 @@
-Welcome to your new dbt project!
+# Tech Test - dbt Project
 
-### Using the starter project
+---
 
-Try running the following commands:
-- dbt run
-- dbt test
+# Overview
+This project, **`tech_test`**, demonstrates dbt functionalities. It uses a simple sales dataset (`RAW.PUBLIC.SALES_DATA`) and generates the following models:
 
+- **`customer_total_sales`** → total sales per customer  
+- **`monthly_orders`** → count of orders per month  
+- **`monthly_orders_incremental`** → count of orders per month using incremental loading  
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+The project includes tests to ensure data quality and documentation explaining dbt fundamentals.
+
+- **`Fundamentals`** → dbt fundamentals explanation  
