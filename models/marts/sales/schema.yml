@@ -1,0 +1,34 @@
+version: 2
+
+sources:
+  - name: RAW
+    database: RAW
+    schema: PUBLIC
+    tables:
+      - name: SALES_DATA
+
+models:
+  - name: customer_total_sales
+    description: "Total sales amount per customer."
+    columns:
+      - name: customer_id
+        description: "Unique ID of the customer."
+        tests:
+          - not_null
+          - unique
+      - name: total_sales
+        description: "Total sales amount for the customer."
+        tests:
+          - not_null
+
+  - name: monthly_orders
+    description: "Number of orders placed per month."
+    columns:
+      - name: month
+        description: "Month of the order (truncated to first day)."
+        tests:
+          - not_null
+      - name: num_orders
+        description: "Total number of orders in that month."
+        tests:
+          - not_null
